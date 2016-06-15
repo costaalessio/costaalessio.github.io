@@ -82,8 +82,8 @@
     ReactDOM.render((
       <Router history={browserHistory}>
         <Route component={App}>
-          <Route className="pad" path="/" component={Home}/>
-          <Route className="pad" path="/about" component={About}/>
+          <Route path="/" component={Home} />
+          <Route path="/about" component={About} />
         </Route>
       </Router>),
       document.getElementById('mount')

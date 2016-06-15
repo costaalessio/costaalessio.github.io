@@ -60,7 +60,10 @@
     const App = React.createClass({
       render: function () {
         return (
-          <NavbarInstance/>
+          <div>
+            <NavbarInstance/>
+            <div className="pad">{this.props.children}</div>
+          </div>
         )
       }
     })
@@ -83,7 +86,7 @@
     })
     ReactDOM.render((
       <Router history={browserHistory}>
-        <Route component={Home}>
+        <Route component={App}>
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
         </Route>

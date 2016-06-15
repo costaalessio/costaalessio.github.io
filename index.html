@@ -37,15 +37,17 @@
     const Carousel = ReactBootstrap.Carousel;
     const MyCarousel = React.createClass({
       render: function () {
-        <Carousel>
-          <Carousel.Item>
-            <img src="/images/caro1.png"/>
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+        return (
+          <Carousel>
+            <Carousel.Item>
+              <img src="/images/caro1.png"/>
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        )
       }
     })
     const NavbarInstance = React.createClass({

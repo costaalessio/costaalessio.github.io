@@ -35,35 +35,19 @@
     const NavDropdown = ReactBootstrap.NavDropdown;
     const LinkContainer = ReactRouterBootstrap.LinkContainer;
     const Carousel = ReactBootstrap.Carousel;
-    const ControlledCarousel = React.createClass({
-      getInitialState() {
-        return {
-          index: 0,
-          direction: null
-        };
-      },
-
-      handleSelect(selectedIndex, e) {
-        this.setState({
-          index: selectedIndex,
-          direction: e.direction
-        });
-      },
-
-      render() {
-        return (
-          <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
-            <Carousel.Item>
-              <img width={1200} height={480} alt="900x500" src="/images/caro1.jpg"/>
-              <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-        );
+    const carouselInstance = React.createClass({
+      render: function () {
+        <Carousel>
+          <Carousel.Item>
+            <img src="/images/caro1.png"/>
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       }
-    });
+    })
     const NavbarInstance = React.createClass({
       getInitialState: function () {
         return {counter: 1}

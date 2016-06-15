@@ -33,6 +33,9 @@
     const MenuItem = ReactBootstrap.MenuItem;
     const NavDropdown = ReactBootstrap.NavDropdown;
     const NavbarInstance = React.createClass({
+      goAbout: function () {
+        console.log('hello');
+      },
       render: function () {
         return (
           <Navbar>
@@ -44,7 +47,7 @@
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav>
-                <NavItem eventKey={1} onclick="console.log('hello'); this.props.history.push('/about')">
+                <NavItem eventKey={1} onclick="this.goAbout">
                   About
                 </NavItem>
               </Nav>

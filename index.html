@@ -34,6 +34,37 @@
     const MenuItem = ReactBootstrap.MenuItem;
     const NavDropdown = ReactBootstrap.NavDropdown;
     const LinkContainer = ReactRouterBootstrap.LinkContainer;
+    const Carousel = ReactBootstrap.Carousel;
+    const ControlledCarousel = React.createClass({
+      getInitialState() {
+        return {
+          index: 0,
+          direction: null
+        };
+      },
+
+      handleSelect(selectedIndex, e) {
+        alert('selected=' + selectedIndex + ', direction=' + e.direction);
+        this.setState({
+          index: selectedIndex,
+          direction: e.direction
+        });
+      },
+
+      render() {
+        return (
+          <Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
+            <Carousel.Item>
+              <img width={1200} height={480} alt="900x500" src="/images/caro1.jpg"/>
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        );
+      }
+    });
     const NavbarInstance = React.createClass({
       getInitialState: function () {
         return {counter: 1}
@@ -47,7 +78,7 @@
           <Navbar>
             <Navbar.Header>
               <Navbar.Brand>
-                <Link to="/">React-Bootstrap</Link>
+                <Link to="/">CSInterLawyers</Link>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
@@ -58,7 +89,6 @@
                     About
                   </NavItem>
                 </LinkContainer>
-
               </Nav>
               <Nav pullRight>
                 <NavItem eventKey={1} href="#">Link Right</NavItem>
@@ -83,6 +113,7 @@
       render: function (){
         return (
           <div>
+            <ControlledCarousel/>
             <h1>Homepage :D</h1>
             <Link to="/about">About</Link>
           </div>

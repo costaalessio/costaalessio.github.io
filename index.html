@@ -11,6 +11,7 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.29.4/react-bootstrap.js"></script>
+    <script src="node_modules/react-router-bootstrap/lib/ReactRouterBootstrap.min.js"></script>
     <title>My first react app</title>
     <style media="screen">
       .pad {
@@ -51,9 +52,12 @@
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav>
-                <NavItem eventKey={1} onclick={this.aboutClick()}>
-                  About
-                </NavItem>
+                <LinkContainer to="/about">
+                  <NavItem eventKey={1}>
+                    About
+                  </NavItem>
+                </LinkContainer>
+
               </Nav>
               <Nav pullRight>
                 <NavItem eventKey={1} href="#">Link Right</NavItem>

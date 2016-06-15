@@ -35,7 +35,7 @@
     const NavDropdown = ReactBootstrap.NavDropdown;
     const LinkContainer = ReactRouterBootstrap.LinkContainer;
     const Carousel = ReactBootstrap.Carousel;
-    const carouselInstance = React.createClass({
+    const MyCarousel = React.createClass({
       render: function () {
         <Carousel>
           <Carousel.Item>
@@ -96,7 +96,7 @@
       render: function (){
         return (
           <div>
-            <ControlledCarousel/>
+            <MyCarousel/>
             <h1>Homepage :D</h1>
             <Link to="/about">About</Link>
           </div>

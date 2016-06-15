@@ -2,18 +2,66 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="https://fb.me/react-15.1.0.min.js"></script>
-    <script src="https://fb.me/react-dom-15.1.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-    <script src="https://npmcdn.com/react-router/umd/ReactRouter.min.js"></script>
+    <script src="https://fb.me/react-15.1.0.js"></script>
+    <script src="https://fb.me/react-dom-15.1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+    <script src="https://npmcdn.com/react-router/umd/ReactRouter.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.29.4/react-bootstrap.js"></script>
     <title>My first react app</title>
+    <style media="screen">
+      .pad {
+          padding-top: 65px;
+      }
+    </style>
   </head>
   <body>
+    <div id="mount"></div>
     <script type="text/babel">
+    //const ReactBootstrap = ReactBootstrap;
     const Router = ReactRouter.Router;
     const Route = ReactRouter.Route;
     const hashHistory = ReactRouter.hashHistory;
-    const Link = ReactRouter.Link
+    const browserHistory = ReactRouter.browserHistory;
+    const Link = ReactRouter.Link;
+    const Navbar = ReactBootstrap.Navbar;
+    const Nav = ReactBootstrap.Nav;
+    const NavItem = ReactBootstrap.NavItem;
+    const MenuItem = ReactBootstrap.MenuItem;
+    const NavDropdown = ReactBootstrap.NavDropdown;
+    const NavbarInstance = React.createClass({
+      render: function () {
+        return (
+          <Navbar inverse>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <Link to="/">React-Bootstrap</a>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+              <Nav>
+                <NavItem eventKey={1} href="#">About</NavItem>
+              </Nav>
+              <Nav pullRight>
+                <NavItem eventKey={1} href="#">Link Right</NavItem>
+                <NavItem eventKey={2} href="#">Link Right</NavItem>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        )
+      }
+    })
+    const App = React.createClass({
+      render: function () {
+        return (
+          <NavbarInstance/>
+        )
+      }
+    })
     const Home = React.createClass({
       render: function (){
         return (
@@ -32,12 +80,13 @@
       }
     })
     ReactDOM.render((
-      //<Big />),
-      <Router history={hashHistory}>
-        <Route path="/" component={Home}/>
-        <Route path="/about" component={About}/>
+      <Router history={browserHistory}>
+        <Route component={App}>
+          <Route className="pad" path="/" component={Home}/>
+          <Route className="pad" path="/about" component={About}/>
+        </Route>
       </Router>),
-      document.body
+      document.getElementById('mount')
     )
     </script>
   </body>

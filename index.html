@@ -62,17 +62,16 @@
       }
     })
     const brandName = {
-      paddingLeft: '60px',
-      paddingTop: '0px',
-      paddingBottom: '0px'
+      padding: '0px',
+      marginLeft: '40px'
     }
     const NavbarInstance = React.createClass({
       render: function () {
         return (
           <Navbar fluid>
             <Navbar.Header>
-              <Navbar.Brand>
-                <Link to="/"><h3 style={brandName}>CSInterLawyers</h3></Link>
+              <Navbar.Brand style={brandName}>
+                <Link to="/"><h3>CSInterLawyers</h3></Link>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>

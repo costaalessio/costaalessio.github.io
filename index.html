@@ -31,9 +31,6 @@
     <div id="mount"></div>
     <script type="text/babel">
     //const ReactBootstrap = ReactBootstrap;
-    const nav_style = {
-      backgroundColor: '#ecf0f1'
-    }
     const Router = ReactRouter.Router;
     const Route = ReactRouter.Route;
     const hashHistory = ReactRouter.hashHistory;
@@ -62,19 +59,12 @@
       }
     })
     const NavbarInstance = React.createClass({
-      getInitialState: function () {
-        return {counter: 1}
-      },
-      aboutClick: function () {
-        console.log('hello', this.state.counter)
-        this.setState({counter: this.state.counter + 1})
-      },
       render: function () {
         return (
-          <Navbar>
+          <Navbar fluid>
             <Navbar.Header>
               <Navbar.Brand>
-                <Link to="/">CSInterLawyers</Link>
+                <Link to="/"><h1>CSInterLawyers<h1></Link>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
@@ -99,7 +89,7 @@
       render: function () {
         return (
           <div>
-            <NavbarInstance style={nav_style}/>
+            <NavbarInstance style}/>
             <div>{this.props.children}</div>
           </div>
         )

@@ -30,6 +30,7 @@
       .navbar-brand {
         padding: 0px;
         margin-left: 30px;
+        font-size: 30px;
       }
     </style>
   </head>
@@ -70,19 +71,17 @@
           <Navbar fluid>
             <Navbar.Header>
               <Navbar.Brand>
-                <Link to="/"><h3>CSInterLawyers</h3></Link>
+                <Link to="/">CSInterLawyers</Link>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
             <Navbar.Collapse>
-              <Nav>
+              <Nav pullRight>
                 <LinkContainer to="/about">
                   <NavItem eventKey={1}>
                     About
                   </NavItem>
                 </LinkContainer>
-              </Nav>
-              <Nav pullRight>
                 <NavItem eventKey={1} href="#">Link Right</NavItem>
                 <NavItem eventKey={2} href="#">Link Right</NavItem>
               </Nav>

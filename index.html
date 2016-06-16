@@ -25,7 +25,7 @@
           max-width: 1200px;a
       }
       .navbar {
-        min-height: 100px
+        min-height: 70px
       }
 
     </style>
@@ -61,13 +61,16 @@
         )
       }
     })
+    const leftPad = {
+      paddingLeft: '30px'
+    }
     const NavbarInstance = React.createClass({
       render: function () {
         return (
           <Navbar fluid>
             <Navbar.Header>
               <Navbar.Brand>
-                <Link to="/"><h3 style={paddingLeft: '30px'}>CSInterLawyers</h3></Link>
+                <Link to="/"><h3 style={leftPad}>CSInterLawyers</h3></Link>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>

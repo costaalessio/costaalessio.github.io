@@ -3,3 +3,4 @@ src/node_modules/
 src/package.json
 src/script.js
 colors
+src/compile.sh

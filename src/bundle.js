@@ -138,37 +138,56 @@ var Home = React.createClass({
 exports.default = Home;
 
 },{"./Carousel":3,"react":490,"react-router":345}],5:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var React = require('react');
+var ulStyle = {
+  listStyleType: 'none',
+  margin: '0px',
+  padding: '0px',
+  maxWidth: '1200px',
+  backgroundColor: '#f1f1f1'
+};
+
 var Nav = React.createClass({
-  displayName: "Nav",
+  displayName: 'Nav',
 
   render: function render() {
     return React.createElement(
-      "div",
-      { className: "nav" },
+      'div',
+      { className: 'nav' },
       React.createElement(
-        "ul",
-        null,
+        'ul',
+        { style: ulStyle },
         React.createElement(
-          "li",
-          { className: "home" },
-          "Home"
+          'li',
+          { className: 'home' },
+          'Home'
         ),
         React.createElement(
-          "li",
-          { className: "about" },
-          "About"
+          'li',
+          { className: 'about' },
+          'About'
         )
       )
     );
   }
 });
 
+var NavItem = React.createClass({
+  displayName: 'NavItem',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement('li', null)
+    );
+  }
+});
 exports.default = Nav;
 
 },{"react":490}],6:[function(require,module,exports){

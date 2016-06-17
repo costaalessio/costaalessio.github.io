@@ -144,13 +144,47 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var React = require('react');
+
 var ulStyle = {
   listStyleType: 'none',
   margin: '0px',
   padding: '0px',
-  maxWidth: '1200px',
-  backgroundColor: '#f1f1f1'
+  maxWidth: '1200px'
 };
+
+var NavItem = React.createClass({
+  displayName: 'NavItem',
+
+  getInitialState: function getInitialState() {
+    return {
+      isHover: false
+    };
+  },
+  hover: function hover() {
+    setState({ isHover: true });
+  },
+  out: function out() {
+    setState({ isHover: false });
+  },
+  render: function render() {
+    var style = {
+      display: "block",
+      color: this.state.isHover ? white : "#000",
+      padding: '8px 0 8px 16px',
+      textDecoration: 'none',
+      backgroundColor: this.state.isHover ? '#555' : '#f1f1f1'
+    };
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'li',
+        { onMouseOver: hover, onMouseOut: out, style: style },
+        'this.props.children'
+      )
+    );
+  }
+});
 
 var Nav = React.createClass({
   displayName: 'Nav',
@@ -163,13 +197,13 @@ var Nav = React.createClass({
         'ul',
         { style: ulStyle },
         React.createElement(
-          'li',
-          { className: 'home' },
+          NavItem,
+          null,
           'Home'
         ),
         React.createElement(
-          'li',
-          { className: 'about' },
+          NavItem,
+          null,
           'About'
         )
       )
@@ -177,17 +211,6 @@ var Nav = React.createClass({
   }
 });
 
-var NavItem = React.createClass({
-  displayName: 'NavItem',
-
-  render: function render() {
-    return React.createElement(
-      'div',
-      null,
-      React.createElement('li', null)
-    );
-  }
-});
 exports.default = Nav;
 
 },{"react":490}],6:[function(require,module,exports){

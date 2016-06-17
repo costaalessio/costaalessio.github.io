@@ -26,8 +26,15 @@ exports.default = About;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _Nav = require('./Nav');
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var React = require('react');
-//import {Nav} from './Nav'
+
 var App = React.createClass({
   displayName: 'App',
 
@@ -35,6 +42,7 @@ var App = React.createClass({
     return React.createElement(
       'div',
       null,
+      React.createElement(_Nav2.default, null),
       React.createElement(
         'div',
         null,
@@ -46,7 +54,7 @@ var App = React.createClass({
 
 exports.default = App;
 
-},{"react":490}],3:[function(require,module,exports){
+},{"./Nav":5,"react":490}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -102,8 +110,6 @@ var _Carousel2 = _interopRequireDefault(_Carousel);
 
 var _reactRouter = require('react-router');
 
-var _Nav = require('./Nav');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var React = require('react');
@@ -131,16 +137,16 @@ var Home = React.createClass({
 
 exports.default = Home;
 
-},{"./Carousel":3,"./Nav":5,"react":490,"react-router":345}],5:[function(require,module,exports){
+},{"./Carousel":3,"react":490,"react-router":345}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var React = require('react');
+var Nav = React.createClass({
+  displayName: "Nav",
 
-var _react = require("react");
-
-var Nav = (0, _react.createClass)({
   render: function render() {
     return React.createElement(
       "div",

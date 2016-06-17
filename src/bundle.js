@@ -26,11 +26,8 @@ exports.default = About;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _Nav = require('./Nav');
-
 var React = require('react');
-
+//import {Nav} from './Nav'
 var App = React.createClass({
   displayName: 'App',
 
@@ -38,7 +35,8 @@ var App = React.createClass({
     return React.createElement(
       'div',
       null,
-      React.createElement(_Nav.Nav, null),
+      '//',
+      React.createElement(Nav, null),
       React.createElement(
         'div',
         null,
@@ -50,7 +48,7 @@ var App = React.createClass({
 
 exports.default = App;
 
-},{"./Nav":5,"react":490}],3:[function(require,module,exports){
+},{"react":490}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

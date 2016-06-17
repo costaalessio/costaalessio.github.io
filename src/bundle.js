@@ -161,10 +161,10 @@ var NavItem = React.createClass({
     };
   },
   hover: function hover() {
-    setState({ isHover: true });
+    this.setState({ isHover: true });
   },
   out: function out() {
-    setState({ isHover: false });
+    this.setState({ isHover: false });
   },
   render: function render() {
     var style = {
@@ -180,7 +180,7 @@ var NavItem = React.createClass({
       React.createElement(
         'li',
         { onMouseOver: this.hover, onMouseOut: this.out, style: style },
-        'this.props.children'
+        this.props.children
       )
     );
   }

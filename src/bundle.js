@@ -42993,7 +42993,7 @@ var React = require('react');
 
 ReactDOM.render(React.createElement(
   _reactRouter.Router,
-  { history: browserHistory },
+  { history: _reactRouter.browserHistory },
   React.createElement(
     _reactRouter.Route,
     { component: _App2.default },

@@ -35,8 +35,6 @@ var App = React.createClass({
     return React.createElement(
       'div',
       null,
-      '//',
-      React.createElement(Nav, null),
       React.createElement(
         'div',
         null,

@@ -104,6 +104,7 @@ var _reactRouter = require('react-router');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var React = require('react');
 var Home = React.createClass({
   displayName: 'Home',
 
@@ -128,7 +129,7 @@ var Home = React.createClass({
 
 exports.default = Home;
 
-},{"./Carousel":3,"react-router":344}],5:[function(require,module,exports){
+},{"./Carousel":3,"react":489,"react-router":344}],5:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/assign"), __esModule: true };
 },{"core-js/library/fn/object/assign":16}],6:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/create"), __esModule: true };

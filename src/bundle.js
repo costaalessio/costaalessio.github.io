@@ -179,7 +179,7 @@ var NavItem = React.createClass({
       null,
       React.createElement(
         'li',
-        { onMouseOver: hover, onMouseOut: out, style: style },
+        { onMouseOver: this.hover, onMouseOut: this.out, style: style },
         'this.props.children'
       )
     );

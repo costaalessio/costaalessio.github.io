@@ -146,7 +146,7 @@ var _react = require("react");
 
 var Nav = (0, _react.createClass)({
   render: function render() {
-    React.createElement(
+    return React.createElement(
       "div",
       { className: "nav" },
       React.createElement(

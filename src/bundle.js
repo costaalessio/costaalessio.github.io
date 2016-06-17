@@ -67,7 +67,7 @@ var MyCarousel = React.createClass({
       React.createElement(
         _reactBootstrap.Carousel.Item,
         null,
-        React.createElement('img', { src: '/images/caro1.jpg' }),
+        React.createElement('img', { src: '../../images/caro1.jpg' }),
         React.createElement(
           _reactBootstrap.Carousel.Caption,
           null,

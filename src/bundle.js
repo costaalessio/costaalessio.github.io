@@ -150,7 +150,8 @@ var ulStyle = {
   margin: '0px',
   padding: '0px',
   maxWidth: '1200px',
-  height: '70px'
+  height: '70px',
+  backgroundColor: '#f1f1f1'
 };
 
 var NavItem = React.createClass({

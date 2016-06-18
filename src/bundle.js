@@ -172,7 +172,8 @@ var NavItem = React.createClass({
       color: this.state.isHover ? 'white' : "#000",
       padding: '8px 0 8px 16px',
       textDecoration: 'none',
-      backgroundColor: this.state.isHover ? '#555' : '#f1f1f1'
+      backgroundColor: this.state.isHover ? '#555' : '#f1f1f1',
+      height: '70px'
     };
     return React.createElement(
       'li',

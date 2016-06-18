@@ -168,7 +168,7 @@ var NavItem = React.createClass({
   },
   render: function render() {
     var style = {
-      display: "block",
+      display: "inline",
       color: this.state.isHover ? 'white' : "#000",
       padding: '8px 0 8px 16px',
       textDecoration: 'none',

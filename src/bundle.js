@@ -42,7 +42,7 @@ var App = React.createClass({
     return React.createElement(
       'div',
       null,
-      React.createElement(_Nav2.default, null),
+      React.createElement(_Nav2.default, { height: '50px' }),
       React.createElement(
         'div',
         null,
@@ -145,15 +145,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 var React = require('react');
 
-var ulStyle = {
-  listStyleType: 'none',
-  margin: '0px',
-  padding: '0px',
-  maxWidth: '1200px',
-  height: '70px',
-  backgroundColor: '#f1f1f1'
-};
-
 var NavItem = React.createClass({
   displayName: 'NavItem',
 
@@ -188,6 +179,14 @@ var Nav = React.createClass({
   displayName: 'Nav',
 
   render: function render() {
+    var ulStyle = {
+      listStyleType: 'none',
+      margin: '0px',
+      padding: '0px',
+      maxWidth: '1200px',
+      height: this.props.height,
+      backgroundColor: '#f1f1f1'
+    };
     return React.createElement(
       'div',
       { className: 'nav' },
@@ -196,12 +195,12 @@ var Nav = React.createClass({
         { style: ulStyle },
         React.createElement(
           NavItem,
-          null,
+          { height: this.props.height },
           'Home'
         ),
         React.createElement(
           NavItem,
-          null,
+          { height: this.props.height },
           'About'
         )
       )

@@ -161,6 +161,7 @@ var NavItem = React.createClass({
   },
   render: function render() {
     var pad = (this.props.height - this.props.fontSize) / 2;
+    console.log(pad);
     var style = {
       fontSize: this.props.fontSize,
       display: "inline",

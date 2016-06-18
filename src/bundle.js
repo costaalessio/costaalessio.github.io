@@ -149,7 +149,8 @@ var ulStyle = {
   listStyleType: 'none',
   margin: '0px',
   padding: '0px',
-  maxWidth: '1200px'
+  maxWidth: '1200px',
+  height: '70px'
 };
 
 var NavItem = React.createClass({
@@ -172,8 +173,7 @@ var NavItem = React.createClass({
       color: this.state.isHover ? 'white' : "#000",
       padding: '8px 0 8px 16px',
       textDecoration: 'none',
-      backgroundColor: this.state.isHover ? '#555' : '#f1f1f1',
-      height: '70px'
+      backgroundColor: this.state.isHover ? '#555' : '#f1f1f1'
     };
     return React.createElement(
       'li',

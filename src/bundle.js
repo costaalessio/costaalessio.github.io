@@ -175,13 +175,9 @@ var NavItem = React.createClass({
       backgroundColor: this.state.isHover ? '#555' : '#f1f1f1'
     };
     return React.createElement(
-      'div',
-      null,
-      React.createElement(
-        'li',
-        { onMouseOver: this.hover, onMouseOut: this.out, style: style },
-        this.props.children
-      )
+      'li',
+      { onMouseOver: this.hover, onMouseOut: this.out, style: style },
+      this.props.children
     );
   }
 });

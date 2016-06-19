@@ -178,8 +178,8 @@ var NavItem = React.createClass({
   }
 });
 
-var Nav = React.createClass({
-  displayName: 'Nav',
+var NavBar = React.createClass({
+  displayName: 'NavBar',
 
   render: function render() {
     var ulStyle = {
@@ -190,27 +190,39 @@ var Nav = React.createClass({
       height: this.props.height,
       backgroundColor: '#f1f1f1'
     };
+    console.log(this.props.children);
     return React.createElement(
       'div',
       { className: 'nav' },
       React.createElement(
         'ul',
         { style: ulStyle },
-        React.createElement(
-          NavItem,
-          { height: this.props.height, fontSize: '18px' },
-          'Home'
-        ),
-        React.createElement(
-          NavItem,
-          { height: this.props.height, fontSize: '18px' },
-          'About'
-        )
+        this.props.children
       )
     );
   }
 });
 
+var Nav = React.createClass({
+  displayName: 'Nav',
+
+  render: function render() {
+    return React.createElement(
+      NavBar,
+      null,
+      React.createElement(
+        NavItem,
+        { height: this.props.height, fontSize: '18px' },
+        'Home'
+      ),
+      React.createElement(
+        NavItem,
+        { height: this.props.height, fontSize: '18px' },
+        'About'
+      )
+    );
+  }
+});
 exports.default = Nav;
 
 },{"react":490}],6:[function(require,module,exports){

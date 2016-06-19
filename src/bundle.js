@@ -124,7 +124,7 @@ var Home = React.createClass({
       React.createElement(
         'h1',
         null,
-        'Homepage :D 1'
+        'Homepage :D 3'
       ),
       React.createElement(
         _reactRouter.Link,

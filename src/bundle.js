@@ -213,7 +213,7 @@ var NavBrand = React.createClass({
   render: function render() {
     var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize)) / 2;
     var style = {
-      fontSize: this.props.fontSize + 4,
+      fontSize: parseInt(this.props.fontSize + 4).toString() + "px",
       display: this.state.isMobile ? "block" : "inline",
       color: "#000",
       padding: pad.toString() + "px",
@@ -278,7 +278,11 @@ var Nav = React.createClass({
         { height: this.props.height, fontSize: '18px' },
         'About'
       ),
-      React.createElement(NavItem, { height: this.props.height, fontSize: '18px' })
+      React.createElement(
+        NavItem,
+        { height: this.props.height, fontSize: '18px' },
+        'Contacts'
+      )
     );
   }
 });

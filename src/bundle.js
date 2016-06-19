@@ -161,10 +161,9 @@ var NavItem = React.createClass({
   },
   render: function render() {
     var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize)) / 2;
-    console.log(pad, this.props.height, this.props.fontSize);
     var style = {
       fontSize: this.props.fontSize,
-      display: "inline",
+      display: "block",
       color: this.state.isHover ? 'white' : "#000",
       padding: pad.toString() + "px",
       textDecoration: 'none',

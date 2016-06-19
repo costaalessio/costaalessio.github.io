@@ -124,7 +124,7 @@ var Home = React.createClass({
       React.createElement(
         'h1',
         null,
-        'Homepage :D 3'
+        'Homepage :D 5'
       ),
       React.createElement(
         _reactRouter.Link,
@@ -213,7 +213,7 @@ var NavBrand = React.createClass({
   render: function render() {
     var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize)) / 2;
     var style = {
-      fontSize: parseInt(this.props.fontSize + 4).toString() + "px",
+      fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
       display: this.state.isMobile ? "block" : "inline",
       color: "#000",
       padding: pad.toString() + "px",

@@ -187,7 +187,6 @@ var NavBar = React.createClass({
       margin: '0px',
       padding: '0px',
       maxWidth: '1200px',
-      height: this.props.height,
       backgroundColor: '#f1f1f1'
     };
     console.log(this.props.children);

@@ -178,7 +178,7 @@ var NavItem = React.createClass({
       fontSize: this.props.fontSize,
       display: this.state.isMobile ? "block" : "inline",
       color: this.state.isHover ? 'white' : "#000",
-      padding: pad.toString() + "px",
+      padding: this.state.isMobile ? "0px " + pad.toString() + "px" : pad.toString() + "px",
       textDecoration: 'none',
       backgroundColor: this.state.isHover ? '#555' : '#f1f1f1',
       lineHeight: this.props.height
@@ -186,6 +186,45 @@ var NavItem = React.createClass({
     return React.createElement(
       'li',
       { onMouseOver: this.hover, onMouseOut: this.out, style: style },
+      this.props.children
+    );
+  }
+});
+
+var NavBrand = React.createClass({
+  displayName: 'NavBrand',
+
+  onResize: function onResize() {
+    this.setState({
+      isMobile: window.innerWidth < 900
+    });
+  },
+  getInitialState: function getInitialState() {
+    return {
+      isMobile: window.innerWidth < 900
+    };
+  },
+  componentDidMount: function componentDidMount() {
+    window.addEventListener('resize', this.onResize);
+  },
+  componentWillUnmount: function componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+  },
+  render: function render() {
+    var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize)) / 2;
+    var style = {
+      fontSize: this.props.fontSize + 4,
+      display: this.state.isMobile ? "block" : "inline",
+      color: "#000",
+      padding: pad.toString() + "px",
+      marginRight: '50px',
+      textDecoration: 'none',
+      backgroundColor: '#f1f1f1',
+      lineHeight: this.props.height
+    };
+    return React.createElement(
+      'li',
+      { style: style },
       this.props.children
     );
   }
@@ -230,7 +269,7 @@ var Nav = React.createClass({
       NavBar,
       null,
       React.createElement(
-        NavItem,
+        NavBrand,
         { height: this.props.height, fontSize: '18px' },
         'Home'
       ),
@@ -238,7 +277,8 @@ var Nav = React.createClass({
         NavItem,
         { height: this.props.height, fontSize: '18px' },
         'About'
-      )
+      ),
+      React.createElement(NavItem, { height: this.props.height, fontSize: '18px' })
     );
   }
 });

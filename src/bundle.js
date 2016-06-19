@@ -148,22 +148,35 @@ var React = require('react');
 var NavItem = React.createClass({
   displayName: 'NavItem',
 
+  onResize: function onResize() {
+    this.setState({
+      isHover: this.state.isHover,
+      isMobile: window.innerWidth < 900
+    });
+  },
   getInitialState: function getInitialState() {
     return {
-      isHover: false
+      isHover: false,
+      isMobile: window.innerWidth < 900
     };
   },
+  componentDidMount: function componentDidMount() {
+    window.addEventListener('resize', this.onResize);
+  },
+  componentWillUnmount: function componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+  },
   hover: function hover() {
-    this.setState({ isHover: true });
+    this.setState({ isHover: true, isMobile: this.state.isMobile });
   },
   out: function out() {
-    this.setState({ isHover: false });
+    this.setState({ isHover: false, isMobile: this.state.isMobile });
   },
   render: function render() {
     var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize)) / 2;
     var style = {
       fontSize: this.props.fontSize,
-      display: "block",
+      display: this.state.isMobile ? "block" : "inline",
       color: this.state.isHover ? 'white' : "#000",
       padding: pad.toString() + "px",
       textDecoration: 'none',
@@ -180,6 +193,13 @@ var NavItem = React.createClass({
 
 var NavBar = React.createClass({
   displayName: 'NavBar',
+
+
+  getInitialState: function getInitialState() {
+    return {
+      isMobile: window.innerWidth < 900
+    };
+  },
 
   render: function render() {
     var ulStyle = {

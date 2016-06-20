@@ -152,39 +152,26 @@ var React = require('react');
 var NavItem = React.createClass({
   displayName: 'NavItem',
 
-  onResize: function onResize() {
-    this.setState({
-      isHover: this.state.isHover,
-      isMobile: window.innerWidth < 900
-    });
-  },
   getInitialState: function getInitialState() {
     return {
-      isHover: false,
-      isMobile: window.innerWidth < 900
+      isHover: false
     };
   },
-  componentDidMount: function componentDidMount() {
-    window.addEventListener('resize', this.onResize);
-  },
-  componentWillUnmount: function componentWillUnmount() {
-    window.removeEventListener('resize', this.onResize);
-  },
   hover: function hover() {
-    this.setState({ isHover: true, isMobile: this.state.isMobile });
+    this.setState({ isHover: true });
   },
   out: function out() {
-    this.setState({ isHover: false, isMobile: this.state.isMobile });
+    this.setState({ isHover: false });
   },
   render: function render() {
     var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize) - 7) / 2;
     var style = {
       fontSize: this.props.fontSize,
-      display: this.state.isMobile ? "block" : "inline",
+      display: this.props.isMobile ? "block" : "inline",
       color: this.state.isHover ? 'white' : "#000",
-      padding: this.state.isMobile ? "0px 30px" : "15px",
-      margin: this.state.isMobile ? "0px" : "10px",
-      borderRadius: this.state.isMobile ? "0px" : "15px",
+      padding: this.props.isMobile ? "0px 30px" : "15px",
+      margin: this.props.isMobile ? "0px" : "10px",
+      borderRadius: this.props.isMobile ? "0px" : "15px",
       textDecoration: 'none',
       backgroundColor: this.state.isHover ? '#555' : '#f1f1f1',
       lineHeight: this.props.height
@@ -223,7 +210,7 @@ var NavBrand = React.createClass({
   render: function render() {
     var style = {
       fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
-      display: this.state.isMobile ? "block" : "inline",
+      display: this.props.isMobile ? "block" : "inline",
       color: "#000",
       margin: 'auto 50px auto 30px',
       textDecoration: 'none',
@@ -245,13 +232,6 @@ var NavBrand = React.createClass({
 var NavBar = React.createClass({
   displayName: 'NavBar',
 
-
-  getInitialState: function getInitialState() {
-    return {
-      isMobile: window.innerWidth < 900
-    };
-  },
-
   render: function render() {
     var ulStyle = {
       listStyleType: 'none',
@@ -272,26 +252,72 @@ var NavBar = React.createClass({
   }
 });
 
+var ToggleButton = React.createClass({
+  displayName: 'ToggleButton',
+
+  getInitialState: function getInitialState() {
+    return {
+      isHover: false
+    };
+  },
+  hover: function hover() {
+    this.setState({ isHover: true });
+  },
+  out: function out() {
+    this.setState({ isHover: false });
+  },
+  render: function render() {
+    var iconStyle = {
+      display: this.props.isMobile ? "block" : "none",
+      color: this.state.isHover ? 'white' : "#000",
+      backgroundColor: this.state.isHover ? '#555' : '#f1f1f1'
+    };
+    var liStyle = {
+      float: "right"
+    };
+    return React.createElement(
+      'li',
+      { style: liStyle },
+      React.createElement('i', { iconStyle: style, className: 'fa fa-bars', 'aria-hidden': 'true' })
+    );
+  }
+});
 var Nav = React.createClass({
   displayName: 'Nav',
 
+  onResize: function onResize() {
+    this.setState({
+      isMobile: window.innerWidth < 900
+    });
+  },
+  getInitialState: function getInitialState() {
+    return {
+      isMobile: window.innerWidth < 900
+    };
+  },
+  componentDidMount: function componentDidMount() {
+    window.addEventListener('resize', this.onResize);
+  },
+  componentWillUnmount: function componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+  },
   render: function render() {
     return React.createElement(
       NavBar,
       null,
       React.createElement(
         NavBrand,
-        { height: this.props.height, fontSize: '15px' },
+        { height: this.props.height, fontSize: '15px', isMobile: this.state.isMobile },
         'CSInterLawyers'
       ),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '15px', link: '/about' },
+        { height: this.props.height, fontSize: '15px', link: '/about', isMobile: this.state.isMobile },
         'About'
       ),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '15px', link: '/contacts' },
+        { height: this.props.height, fontSize: '15px', link: '/contacts', isMobile: this.state.isMobile },
         'Contacts'
       )
     );

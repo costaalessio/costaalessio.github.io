@@ -253,7 +253,7 @@ var ToggleButton = React.createClass({
   },
   render: function render() {
     var pad = 10;
-    var marginV = (this.props.height - pad - 28) / 2;
+    var marginV = (parseInt(his.props.height) - pad - 28) / 2;
     var marginO = 30 - pad;
     var padString = pad.toString() + "px";
     var marginString = marginV.toString() + "px " + marginO.toString() + "px";

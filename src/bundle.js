@@ -177,7 +177,7 @@ var NavItem = React.createClass({
     this.setState({ isHover: false, isMobile: this.state.isMobile });
   },
   render: function render() {
-    var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize)) / 2;
+    var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize) - 7) / 2;
     var style = {
       fontSize: this.props.fontSize,
       display: this.state.isMobile ? "block" : "inline",
@@ -219,7 +219,7 @@ var NavBrand = React.createClass({
     window.removeEventListener('resize', this.onResize);
   },
   render: function render() {
-    var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize) - 4) / 2;
+    var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize) - 7) / 2;
     var style = {
       fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
       display: this.state.isMobile ? "block" : "inline",
@@ -281,17 +281,17 @@ var Nav = React.createClass({
       null,
       React.createElement(
         NavBrand,
-        { height: this.props.height, fontSize: '18px' },
+        { height: this.props.height, fontSize: '15px' },
         'Home'
       ),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '18px', link: '/about' },
+        { height: this.props.height, fontSize: '15px', link: '/about' },
         'About'
       ),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '18px', link: '/contacts' },
+        { height: this.props.height, fontSize: '15px', link: '/contacts' },
         'Contacts'
       )
     );

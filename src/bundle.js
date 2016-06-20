@@ -252,7 +252,14 @@ var ToggleButton = React.createClass({
     this.setState({ isHover: false });
   },
   render: function render() {
+    var pad = 10;
+    var marginV = (this.props.height - pad - 28) / 2;
+    var marginO = 30 - pad;
+    var padString = pad.toString() + "px";
+    var marginString = marginV.toString() + "px " + marginO.toString() + "px";
     var iconStyle = {
+      padding: padString,
+      margin: marginString,
       display: this.props.isMobile ? "block" : "none",
       color: this.state.isHover ? 'white' : "#000",
       backgroundColor: this.state.isHover ? '#555' : '#f1f1f1'
@@ -295,7 +302,7 @@ var Nav = React.createClass({
         { height: this.props.height, fontSize: '15px', isMobile: this.state.isMobile },
         'CSInterLawyers'
       ),
-      React.createElement(ToggleButton, { isMobile: this.state.isMobile }),
+      React.createElement(ToggleButton, { isMobile: this.state.isMobile, height: this.props.height }),
       React.createElement(
         NavItem,
         { height: this.props.height, fontSize: '15px', link: '/about', isMobile: this.state.isMobile },

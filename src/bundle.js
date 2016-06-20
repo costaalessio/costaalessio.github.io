@@ -168,11 +168,11 @@ var NavItem = React.createClass({
     var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize) - 7) / 2;
     var style = {
       fontSize: this.props.fontSize,
-      display: this.props.isMobile ? "block" : "inline",
+      display: this.props.isMobile ? this.props.visible ? "block" : "none" : "inline",
       color: this.state.isHover ? 'white' : "#000",
       padding: this.props.isMobile ? "0px 30px" : "15px",
       margin: this.props.isMobile ? "0px" : "10px",
-      borderRadius: this.props.isMobile ? "0px" : "15px",
+      borderRadius: this.props.isMobile ? "0px" : "10px",
       textDecoration: 'none',
       backgroundColor: this.state.isHover ? '#555' : '#f1f1f1',
       lineHeight: this.props.height
@@ -259,6 +259,7 @@ var ToggleButton = React.createClass({
     var marginString = marginV.toString() + "px " + marginO.toString() + "px";
     console.log(marginString);
     var iconStyle = {
+      borderRadius: "10px",
       padding: padString,
       margin: marginString,
       display: this.props.isMobile ? "block" : "none",
@@ -270,7 +271,7 @@ var ToggleButton = React.createClass({
     };
     return React.createElement(
       'li',
-      { style: liStyle, onMouseOver: this.hover, onMouseOut: this.out },
+      { style: liStyle, onMouseOver: this.hover, onMouseOut: this.out, onClick: this.props.action },
       React.createElement(FontAwesome, { name: 'bars', size: '2x', style: iconStyle })
     );
   }
@@ -278,14 +279,22 @@ var ToggleButton = React.createClass({
 var Nav = React.createClass({
   displayName: 'Nav',
 
+  makeVisible: function makeVisible() {
+    this.setState({
+      isMobile: this.state.isMobile,
+      visible: !visible
+    });
+  },
   onResize: function onResize() {
     this.setState({
-      isMobile: window.innerWidth < 900
+      isMobile: window.innerWidth < 900,
+      visible: this.state.visible
     });
   },
   getInitialState: function getInitialState() {
     return {
-      isMobile: window.innerWidth < 900
+      isMobile: window.innerWidth < 900,
+      visible: false
     };
   },
   componentDidMount: function componentDidMount() {
@@ -295,6 +304,7 @@ var Nav = React.createClass({
     window.removeEventListener('resize', this.onResize);
   },
   render: function render() {
+    console.log(this.state.visible);
     return React.createElement(
       NavBar,
       null,
@@ -303,15 +313,15 @@ var Nav = React.createClass({
         { height: this.props.height, fontSize: '15px', isMobile: this.state.isMobile },
         'CSInterLawyers'
       ),
-      React.createElement(ToggleButton, { isMobile: this.state.isMobile, height: this.props.height }),
+      React.createElement(ToggleButton, { isMobile: this.state.isMobile, height: this.props.height, action: this.makeVisible }),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '15px', link: '/about', isMobile: this.state.isMobile },
+        { height: this.props.height, fontSize: '15px', link: '/about', isMobile: this.state.isMobile, visible: this.state.visible },
         'About'
       ),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '15px', link: '/contacts', isMobile: this.state.isMobile },
+        { height: this.props.height, fontSize: '15px', link: '/contacts', isMobile: this.state.isMobile, visible: this.state.visible },
         'Contacts'
       )
     );

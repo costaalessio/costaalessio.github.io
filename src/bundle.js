@@ -177,11 +177,11 @@ var NavItem = React.createClass({
       lineHeight: this.props.height
     };
     return React.createElement(
-      'li',
-      { onMouseOver: this.hover, onMouseOut: this.out, style: style },
+      _reactRouter.Link,
+      { to: this.props.link },
       React.createElement(
-        _reactRouter.Link,
-        { to: this.props.link },
+        'li',
+        { onMouseOver: this.hover, onMouseOut: this.out, style: style },
         this.props.children
       )
     );
@@ -218,11 +218,11 @@ var NavBrand = React.createClass({
       lineHeight: this.props.height
     };
     return React.createElement(
-      'li',
-      { style: style },
+      _reactRouter.Link,
+      { to: '/' },
       React.createElement(
-        _reactRouter.Link,
-        { to: '/' },
+        'li',
+        { style: style },
         this.props.children
       )
     );
@@ -278,7 +278,7 @@ var ToggleButton = React.createClass({
     return React.createElement(
       'li',
       { style: liStyle },
-      React.createElement('i', { iconStyle: iconStyle, className: 'fa fa-bars', 'aria-hidden': 'true' })
+      React.createElement('i', { style: iconStyle, className: 'fa fa-bars', 'aria-hidden': 'true' })
     );
   }
 });

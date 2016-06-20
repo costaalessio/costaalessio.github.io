@@ -83,12 +83,12 @@ var MyCarousel = React.createClass({
           _reactBootstrap.Carousel.Caption,
           { style: style },
           React.createElement(
-            'h2',
+            'h3',
             { style: { color: 'rgb(0,0,0)' } },
             'International Lawyers working for you'
           ),
           React.createElement(
-            'h4',
+            'h5',
             { style: { color: 'rgb(0,0,0)' } },
             'How can we help you?'
           )
@@ -170,7 +170,7 @@ var NavItem = React.createClass({
   render: function render() {
     var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize) - 7) / 2;
     var style = {
-      //fontSize: this.props.fontSize,
+      fontSize: this.props.fontSize,
       display: this.props.isMobile ? this.props.visible ? "block" : "none" : "inline",
       color: this.state.isHover ? 'white' : "#000",
       padding: this.props.isMobile ? "0px 30px" : "15px",
@@ -197,7 +197,7 @@ var NavBrand = React.createClass({
 
   render: function render() {
     var style = {
-      //fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
+      fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
       display: "inline",
       color: "#000",
       margin: 'auto 50px auto 30px',

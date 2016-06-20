@@ -188,9 +188,13 @@ var NavItem = React.createClass({
       lineHeight: this.props.height
     };
     return React.createElement(
-      'li',
-      { onMouseOver: this.hover, onMouseOut: this.out, style: style },
-      this.props.children
+      _reactRouter.Link,
+      { to: this.props.link },
+      React.createElement(
+        'li',
+        { onMouseOver: this.hover, onMouseOut: this.out, style: style },
+        this.props.children
+      )
     );
   }
 });
@@ -256,18 +260,13 @@ var NavBar = React.createClass({
       maxWidth: '1200px',
       backgroundColor: '#f1f1f1'
     };
-    console.log(this.props.children);
     return React.createElement(
       'div',
       { className: 'nav' },
       React.createElement(
-        _reactRouter.Link,
-        { to: '/about' },
-        React.createElement(
-          'ul',
-          { style: ulStyle },
-          this.props.children
-        )
+        'ul',
+        { style: ulStyle },
+        this.props.children
       )
     );
   }

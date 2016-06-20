@@ -177,11 +177,11 @@ var NavItem = React.createClass({
       lineHeight: this.props.height
     };
     return React.createElement(
-      _reactRouter.Link,
-      { to: this.props.link },
+      'li',
+      { onMouseOver: this.hover, onMouseOut: this.out, style: style },
       React.createElement(
-        'li',
-        { onMouseOver: this.hover, onMouseOut: this.out, style: style },
+        _reactRouter.Link,
+        { to: this.props.link },
         this.props.children
       )
     );
@@ -218,11 +218,11 @@ var NavBrand = React.createClass({
       lineHeight: this.props.height
     };
     return React.createElement(
-      _reactRouter.Link,
-      { to: '/' },
+      'li',
+      { style: style },
       React.createElement(
-        'li',
-        { style: style },
+        _reactRouter.Link,
+        { to: '/' },
         this.props.children
       )
     );

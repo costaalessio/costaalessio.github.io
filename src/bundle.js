@@ -287,13 +287,13 @@ var Nav = React.createClass({
   },
   onResize: function onResize() {
     this.setState({
-      isMobile: window.innerWidth < 900 && screen.width < 900,
+      isMobile: window.innerWidth < 900 || screen.width < 900,
       visible: this.state.visible
     });
   },
   getInitialState: function getInitialState() {
     return {
-      isMobile: window.innerWidth < 900 && screen.width < 900,
+      isMobile: window.innerWidth < 900 || screen.width < 900,
       visible: false
     };
   },

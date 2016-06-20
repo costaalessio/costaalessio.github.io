@@ -219,13 +219,11 @@ var NavBrand = React.createClass({
     window.removeEventListener('resize', this.onResize);
   },
   render: function render() {
-    var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize) - 7) / 2;
     var style = {
       fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
       display: this.state.isMobile ? "block" : "inline",
       color: "#000",
-      padding: pad.toString() + "px",
-      margin: '0px 50px',
+      margin: 'auto 50px',
       textDecoration: 'none',
       backgroundColor: '#f1f1f1',
       lineHeight: this.props.height

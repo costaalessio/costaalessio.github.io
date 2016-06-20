@@ -182,7 +182,7 @@ var NavItem = React.createClass({
       fontSize: this.props.fontSize,
       display: this.state.isMobile ? "block" : "inline-block",
       color: this.state.isHover ? 'white' : "#000",
-      //padding: this.state.isMobile ? "0px " + pad.toString() + "px" : pad.toString() + "px",
+      padding: this.state.isMobile ? "0px 30px" : "2px 30px 0px",
       textDecoration: 'none',
       backgroundColor: this.state.isHover ? '#555' : '#f1f1f1',
       lineHeight: this.props.height

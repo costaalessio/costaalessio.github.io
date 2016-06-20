@@ -289,13 +289,13 @@ var Nav = React.createClass({
   },
   onResize: function onResize() {
     this.setState({
-      isMobile: window.innerWidth < 732 || screen.width < 732,
+      isMobile: window.innerWidth < 732,
       visible: this.state.visible
     });
   },
   getInitialState: function getInitialState() {
     return {
-      isMobile: window.innerWidth < 732 || screen.width < 732,
+      isMobile: window.innerWidth < 732,
       visible: false
     };
   },

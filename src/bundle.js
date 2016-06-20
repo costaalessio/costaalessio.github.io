@@ -225,7 +225,6 @@ var NavBar = React.createClass({
       listStyleType: 'none',
       margin: '0px',
       padding: '0px',
-      maxWidth: '1200px',
       backgroundColor: '#f1f1f1'
     };
     return React.createElement(

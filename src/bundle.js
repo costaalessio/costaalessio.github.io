@@ -257,6 +257,7 @@ var ToggleButton = React.createClass({
     var marginO = 30 - pad;
     var padString = pad.toString() + "px";
     var marginString = marginV.toString() + "px " + marginO.toString() + "px";
+    console.log(marginString);
     var iconStyle = {
       padding: padString,
       margin: marginString,

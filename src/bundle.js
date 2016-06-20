@@ -282,7 +282,7 @@ var Nav = React.createClass({
       React.createElement(
         NavBrand,
         { height: this.props.height, fontSize: '15px' },
-        'Home'
+        'CSInterLawyers'
       ),
       React.createElement(
         NavItem,

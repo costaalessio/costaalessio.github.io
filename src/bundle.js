@@ -225,7 +225,7 @@ var NavBrand = React.createClass({
       fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
       display: this.state.isMobile ? "block" : "inline",
       color: "#000",
-      margin: 'auto 30px auto 50px',
+      margin: 'auto 50px auto 30px',
       textDecoration: 'none',
       backgroundColor: '#f1f1f1',
       lineHeight: this.props.height

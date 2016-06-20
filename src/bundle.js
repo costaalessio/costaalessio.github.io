@@ -256,7 +256,8 @@ var NavBar = React.createClass({
       margin: '0px',
       padding: '0px',
       maxWidth: '1200px',
-      backgroundColor: '#f1f1f1'
+      backgroundColor: '#f1f1f1',
+      height: this.props.height
     };
     return React.createElement(
       'div',
@@ -276,7 +277,7 @@ var Nav = React.createClass({
   render: function render() {
     return React.createElement(
       NavBar,
-      null,
+      { height: this.props.height },
       React.createElement(
         NavBrand,
         { height: this.props.height, fontSize: '15px' },

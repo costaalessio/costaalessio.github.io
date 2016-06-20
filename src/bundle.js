@@ -191,26 +191,10 @@ var NavItem = React.createClass({
 var NavBrand = React.createClass({
   displayName: 'NavBrand',
 
-  onResize: function onResize() {
-    this.setState({
-      isMobile: window.innerWidth < 900
-    });
-  },
-  getInitialState: function getInitialState() {
-    return {
-      isMobile: window.innerWidth < 900
-    };
-  },
-  componentDidMount: function componentDidMount() {
-    window.addEventListener('resize', this.onResize);
-  },
-  componentWillUnmount: function componentWillUnmount() {
-    window.removeEventListener('resize', this.onResize);
-  },
   render: function render() {
     var style = {
       fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
-      display: this.props.isMobile ? "block" : "inline",
+      display: "inline",
       color: "#000",
       margin: 'auto 50px auto 30px',
       textDecoration: 'none',
@@ -277,7 +261,7 @@ var ToggleButton = React.createClass({
     };
     return React.createElement(
       'li',
-      { style: liStyle },
+      { style: liStyle, onMouseOver: this.hover, onMouseOut: this.out },
       React.createElement('i', { style: iconStyle, className: 'fa fa-bars', 'aria-hidden': 'true' })
     );
   }

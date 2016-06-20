@@ -262,7 +262,7 @@ var NavBar = React.createClass({
       { className: 'nav' },
       React.createElement(
         _reactRouter.Link,
-        { to: this.props.link },
+        { to: '/about' },
         React.createElement(
           'ul',
           { style: ulStyle },

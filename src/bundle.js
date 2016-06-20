@@ -42,7 +42,7 @@ var App = React.createClass({
     return React.createElement(
       'div',
       null,
-      React.createElement(_Nav2.default, { height: '50px' }),
+      React.createElement(_Nav2.default, { height: '80px' }),
       React.createElement(
         'div',
         null,

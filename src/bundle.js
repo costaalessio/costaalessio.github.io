@@ -186,11 +186,7 @@ var NavItem = React.createClass({
       React.createElement(
         'li',
         { onFocus: this.over, onBlur: this.out, onMouseOver: this.hover, onMouseOut: this.out, style: style },
-        React.createElement(
-          'h1',
-          null,
-          this.props.children
-        )
+        this.props.children
       )
     );
   }
@@ -215,11 +211,7 @@ var NavBrand = React.createClass({
       React.createElement(
         'li',
         { style: style },
-        React.createElement(
-          'h2',
-          null,
-          this.props.children
-        )
+        this.props.children
       )
     );
   }

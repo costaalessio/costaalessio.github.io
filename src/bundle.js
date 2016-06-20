@@ -278,7 +278,7 @@ var ToggleButton = React.createClass({
     return React.createElement(
       'li',
       { style: liStyle },
-      React.createElement('i', { iconStyle: style, className: 'fa fa-bars', 'aria-hidden': 'true' })
+      React.createElement('i', { iconStyle: iconStyle, className: 'fa fa-bars', 'aria-hidden': 'true' })
     );
   }
 });

@@ -70,7 +70,7 @@ var MyCarousel = React.createClass({
 
   render: function render() {
     var style = {
-      backgroundColor: "rgba(255, 90, 0, 0.7)"
+      backgroundColor: "rgba(241, 241, 241, 0.7)"
     };
     return React.createElement(
       _reactBootstrap.Carousel,
@@ -84,12 +84,12 @@ var MyCarousel = React.createClass({
           { style: style },
           React.createElement(
             'h2',
-            null,
+            { style: { color: 'rgb(0,0,0)' } },
             'International Lawyers working for you'
           ),
           React.createElement(
             'h4',
-            null,
+            { style: { color: 'rgb(0,0,0)' } },
             'How can we help you?'
           )
         )

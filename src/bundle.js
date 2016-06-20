@@ -218,6 +218,7 @@ var NavBrand = React.createClass({
       color: "#000",
       padding: pad.toString() + "px",
       marginRight: '50px',
+      margintLeft: '50px',
       textDecoration: 'none',
       backgroundColor: '#f1f1f1',
       lineHeight: this.props.height

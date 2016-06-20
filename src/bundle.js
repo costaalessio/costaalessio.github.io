@@ -170,7 +170,7 @@ var NavItem = React.createClass({
   render: function render() {
     var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize) - 7) / 2;
     var style = {
-      fontSize: this.props.fontSize,
+      //fontSize: this.props.fontSize,
       display: this.props.isMobile ? this.props.visible ? "block" : "none" : "inline",
       color: this.state.isHover ? 'white' : "#000",
       padding: this.props.isMobile ? "0px 30px" : "15px",
@@ -186,7 +186,11 @@ var NavItem = React.createClass({
       React.createElement(
         'li',
         { onFocus: this.over, onBlur: this.out, onMouseOver: this.hover, onMouseOut: this.out, style: style },
-        this.props.children
+        React.createElement(
+          'h1',
+          null,
+          this.props.children
+        )
       )
     );
   }
@@ -197,7 +201,7 @@ var NavBrand = React.createClass({
 
   render: function render() {
     var style = {
-      fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
+      //fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
       display: "inline",
       color: "#000",
       margin: 'auto 50px auto 30px',
@@ -211,7 +215,11 @@ var NavBrand = React.createClass({
       React.createElement(
         'li',
         { style: style },
-        this.props.children
+        React.createElement(
+          'h2',
+          null,
+          this.props.children
+        )
       )
     );
   }
@@ -248,7 +256,7 @@ var ToggleButton = React.createClass({
     };
   },
   hover: function hover() {
-    this.setState({ isClicked: true });
+    this.setState({ isHover: true });
   },
   out: function out() {
     this.setState({ isHover: false });

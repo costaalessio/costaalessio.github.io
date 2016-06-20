@@ -310,6 +310,7 @@ var Nav = React.createClass({
         { height: this.props.height, fontSize: '15px', isMobile: this.state.isMobile },
         'CSInterLawyers'
       ),
+      React.createElement(ToggleButton, { isMobile: this.state.isMobile }),
       React.createElement(
         NavItem,
         { height: this.props.height, fontSize: '15px', link: '/about', isMobile: this.state.isMobile },

@@ -69,6 +69,9 @@ var MyCarousel = React.createClass({
   displayName: 'MyCarousel',
 
   render: function render() {
+    var style = {
+      backgroundColor: "rgba(255, 90, 0, 0.7)"
+    };
     return React.createElement(
       _reactBootstrap.Carousel,
       null,
@@ -78,14 +81,14 @@ var MyCarousel = React.createClass({
         React.createElement('img', { src: '../../images/caro1.jpg' }),
         React.createElement(
           _reactBootstrap.Carousel.Caption,
-          null,
+          { style: style },
           React.createElement(
-            'h3',
+            'h2',
             null,
             'International Lawyers working for you'
           ),
           React.createElement(
-            'p',
+            'h4',
             null,
             'How can we help you?'
           )
@@ -182,7 +185,7 @@ var NavItem = React.createClass({
       { to: this.props.link },
       React.createElement(
         'li',
-        { onMouseOver: this.hover, onMouseOut: this.out, style: style },
+        { onFocus: this.over, onBlur: this.out, onMouseOver: this.hover, onMouseOut: this.out, style: style },
         this.props.children
       )
     );
@@ -242,11 +245,11 @@ var ToggleButton = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      isHover: false
+      isClicked: false
     };
   },
   hover: function hover() {
-    this.setState({ isHover: true });
+    this.setState({ isClicked: true });
   },
   out: function out() {
     this.setState({ isHover: false });
@@ -287,13 +290,13 @@ var Nav = React.createClass({
   },
   onResize: function onResize() {
     this.setState({
-      isMobile: window.innerWidth < 900 || screen.width < 900,
+      isMobile: window.innerWidth < 732 || screen.width < 732,
       visible: this.state.visible
     });
   },
   getInitialState: function getInitialState() {
     return {
-      isMobile: window.innerWidth < 900 || screen.width < 900,
+      isMobile: window.innerWidth < 732 || screen.width < 732,
       visible: false
     };
   },

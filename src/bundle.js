@@ -282,7 +282,7 @@ var Nav = React.createClass({
   makeVisible: function makeVisible() {
     this.setState({
       isMobile: this.state.isMobile,
-      visible: !visible
+      visible: !this.state.visible
     });
   },
   onResize: function onResize() {

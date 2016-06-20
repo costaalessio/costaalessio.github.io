@@ -177,8 +177,7 @@ var NavItem = React.createClass({
     this.setState({ isHover: false, isMobile: this.state.isMobile });
   },
   render: function render() {
-    var pad = (parseInt(this.props.height) - 16) / 2;
-    console.log(pad);
+    var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize)) / 2;
     var style = {
       fontSize: this.props.fontSize,
       display: this.state.isMobile ? "block" : "inline",
@@ -220,8 +219,7 @@ var NavBrand = React.createClass({
     window.removeEventListener('resize', this.onResize);
   },
   render: function render() {
-    var pad = (parseInt(this.props.height) - 16) / 2;
-    console.log(pad);
+    var pad = (parseInt(this.props.height) - parseInt(this.props.fontSize) - 4) / 2;
     var style = {
       fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
       display: this.state.isMobile ? "block" : "inline",

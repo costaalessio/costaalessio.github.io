@@ -143,7 +143,11 @@ exports.default = Home;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _reactRouter = require('react-router');
+
 var React = require('react');
+
 
 var NavItem = React.createClass({
   displayName: 'NavItem',
@@ -223,9 +227,13 @@ var NavBrand = React.createClass({
       lineHeight: this.props.height
     };
     return React.createElement(
-      'li',
-      { style: style },
-      this.props.children
+      _reactRouter.Link,
+      { to: '/' },
+      React.createElement(
+        'li',
+        { style: style },
+        this.props.children
+      )
     );
   }
 });
@@ -253,9 +261,13 @@ var NavBar = React.createClass({
       'div',
       { className: 'nav' },
       React.createElement(
-        'ul',
-        { style: ulStyle },
-        this.props.children
+        _reactRouter.Link,
+        { to: this.props.link },
+        React.createElement(
+          'ul',
+          { style: ulStyle },
+          this.props.children
+        )
       )
     );
   }
@@ -275,12 +287,12 @@ var Nav = React.createClass({
       ),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '18px' },
+        { height: this.props.height, fontSize: '18px', link: '/about' },
         'About'
       ),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '18px' },
+        { height: this.props.height, fontSize: '18px', link: '/contacts' },
         'Contacts'
       )
     );
@@ -288,7 +300,7 @@ var Nav = React.createClass({
 });
 exports.default = Nav;
 
-},{"react":490}],6:[function(require,module,exports){
+},{"react":490,"react-router":345}],6:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/assign"), __esModule: true };
 },{"core-js/library/fn/object/assign":17}],7:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/create"), __esModule: true };

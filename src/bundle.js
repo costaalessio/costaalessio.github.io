@@ -124,7 +124,7 @@ var Home = React.createClass({
       React.createElement(
         'h1',
         null,
-        'Homepage :D 5'
+        'Homepage :D 4'
       ),
       React.createElement(
         _reactRouter.Link,
@@ -217,8 +217,7 @@ var NavBrand = React.createClass({
       display: this.state.isMobile ? "block" : "inline",
       color: "#000",
       padding: pad.toString() + "px",
-      marginRight: '50px',
-      margintLeft: '50px',
+      margin: '0px 50px',
       textDecoration: 'none',
       backgroundColor: '#f1f1f1',
       lineHeight: this.props.height

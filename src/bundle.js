@@ -263,7 +263,7 @@ var ToggleButton = React.createClass({
     return React.createElement(
       'li',
       { style: liStyle, onMouseOver: this.hover, onMouseOut: this.out },
-      React.createElement(FontAwesome, { name: 'bars', style: iconStyle })
+      React.createElement(FontAwesome, { name: 'bars', size: '2x', style: iconStyle })
     );
   }
 });

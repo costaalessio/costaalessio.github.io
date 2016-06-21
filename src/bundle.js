@@ -364,7 +364,7 @@ var ServJumboItem = React.createClass({
       { xs: 12, md: 4, style: colStyle },
       React.createElement(
         _reactBootstrap.Jumbotron,
-        null,
+        { style: jumboStyle },
         this.props.children
       )
     );

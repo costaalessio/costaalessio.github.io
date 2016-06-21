@@ -376,7 +376,7 @@ var ServJumbo = React.createClass({
 
   render: function render() {
     var style = {
-      backgroundImage: '../../images/london.jpg'
+      backgroundImage: "url('../../images/london.jpg')"
     };
     return React.createElement(
       _reactBootstrap.Grid,

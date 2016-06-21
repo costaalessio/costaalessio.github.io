@@ -376,88 +376,92 @@ var ServJumbo = React.createClass({
 
   render: function render() {
     var style = {
-      backgroundImage: "url('../../images/london.jpg')"
+      backgroundColor: "#140D26"
     };
     return React.createElement(
-      _reactBootstrap.Grid,
+      'div',
       { style: style },
       React.createElement(
-        _reactBootstrap.Row,
+        _reactBootstrap.Grid,
         null,
         React.createElement(
-          ServJumboItem,
+          _reactBootstrap.Row,
           null,
           React.createElement(
-            'h2',
-            null,
-            'Italian Legal Services'
-          ),
-          React.createElement(
-            'ul',
+            ServJumboItem,
             null,
             React.createElement(
-              'li',
+              'h2',
               null,
-              'Divorce & family law'
+              'Italian Legal Services'
             ),
             React.createElement(
-              'li',
+              'ul',
               null,
-              'Property law'
-            ),
-            React.createElement(
-              'li',
-              null,
-              'Wills and probate'
-            ),
-            React.createElement(
-              'li',
-              null,
-              'Tax law & account'
-            ),
-            React.createElement(
-              'li',
-              null,
-              'Commercial & corporate law'
-            ),
-            React.createElement(
-              'li',
-              null,
-              'Litigation & dispute resolution'
-            ),
-            React.createElement(
-              'li',
-              null,
-              'Citizenship law'
+              React.createElement(
+                'li',
+                null,
+                'Divorce & family law'
+              ),
+              React.createElement(
+                'li',
+                null,
+                'Property law'
+              ),
+              React.createElement(
+                'li',
+                null,
+                'Wills and probate'
+              ),
+              React.createElement(
+                'li',
+                null,
+                'Tax law & account'
+              ),
+              React.createElement(
+                'li',
+                null,
+                'Commercial & corporate law'
+              ),
+              React.createElement(
+                'li',
+                null,
+                'Litigation & dispute resolution'
+              ),
+              React.createElement(
+                'li',
+                null,
+                'Citizenship law'
+              )
             )
-          )
-        ),
-        React.createElement(
-          ServJumboItem,
-          null,
-          React.createElement(
-            'h2',
-            null,
-            'Hello'
           ),
           React.createElement(
-            'p',
+            ServJumboItem,
             null,
-            'Po'
-          )
-        ),
-        React.createElement(
-          ServJumboItem,
-          null,
-          React.createElement(
-            'h2',
-            null,
-            'Hello'
+            React.createElement(
+              'h2',
+              null,
+              'Hello'
+            ),
+            React.createElement(
+              'p',
+              null,
+              'Po'
+            )
           ),
           React.createElement(
-            'p',
+            ServJumboItem,
             null,
-            'Po'
+            React.createElement(
+              'h2',
+              null,
+              'Hello'
+            ),
+            React.createElement(
+              'p',
+              null,
+              'Po'
+            )
           )
         )
       )

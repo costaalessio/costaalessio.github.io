@@ -350,10 +350,18 @@ var React = require('react');
 var ServJumboItem = React.createClass({
   displayName: 'ServJumboItem',
 
+
   render: function render() {
+    var colStyle = {
+      paddingTop: "30px"
+    };
+    var jumboStyle = {
+      borderRadius: "0px",
+      backgroundColor: "#f1f1f1"
+    };
     return React.createElement(
       _reactBootstrap.Col,
-      { xs: 12, md: 4, style: { paddingTop: "30px" } },
+      { xs: 12, md: 4, style: colStyle },
       React.createElement(
         _reactBootstrap.Jumbotron,
         null,

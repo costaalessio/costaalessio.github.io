@@ -357,7 +357,7 @@ var ServJumboItem = React.createClass({
     };
     var jumboStyle = {
       borderRadius: "0px",
-      backgroundColor: "#f1f1f1"
+      backgroundColor: "rgba(241,241,241,0.7)"
     };
     return React.createElement(
       _reactBootstrap.Col,
@@ -373,10 +373,14 @@ var ServJumboItem = React.createClass({
 var ServJumbo = React.createClass({
   displayName: 'ServJumbo',
 
+
   render: function render() {
+    var style = {
+      backgroundImage: '../../images/london.jpg'
+    };
     return React.createElement(
       _reactBootstrap.Grid,
-      null,
+      { style: style },
       React.createElement(
         _reactBootstrap.Row,
         null,

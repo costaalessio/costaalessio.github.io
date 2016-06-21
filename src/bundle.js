@@ -353,7 +353,7 @@ var ServJumboItem = React.createClass({
   render: function render() {
     return React.createElement(
       _reactBootstrap.Col,
-      { xs: 12, md: 4 },
+      { xs: 12, md: 4, style: { paddingTop: "30px" } },
       React.createElement(
         _reactBootstrap.Jumbotron,
         null,

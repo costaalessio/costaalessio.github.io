@@ -72,6 +72,9 @@ var MyCarousel = React.createClass({
     var style = {
       backgroundColor: "rgba(241, 241, 241, 0.7)"
     };
+    var caroStyle = {
+      maxWidth: '2000px'
+    };
     return React.createElement(
       _reactBootstrap.Carousel,
       null,

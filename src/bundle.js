@@ -183,11 +183,7 @@ var HomePageImage = React.createClass({
       React.createElement(
         _reactBootstrap.Row,
         null,
-        React.createElement(
-          _reactBootstrap.Col,
-          { xs: 12 },
-          React.createElement('img', { src: '../../images/caro1.jpg', thumbnail: true })
-        ),
+        React.createElement('img', { className: 'col col-xs-6', src: '../../images/caro1.jpg', thumbnail: true }),
         React.createElement(
           'h1',
           null,

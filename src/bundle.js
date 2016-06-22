@@ -381,6 +381,9 @@ var ServJumbo = React.createClass({
     var style = {
       backgroundColor: "#140D26"
     };
+    var liStyle = {
+      fontSize: '18px'
+    };
     return React.createElement(
       'div',
       { style: style },
@@ -403,37 +406,37 @@ var ServJumbo = React.createClass({
               null,
               React.createElement(
                 'li',
-                null,
+                { style: liStyle },
                 'Divorce & family law'
               ),
               React.createElement(
                 'li',
-                null,
+                { style: liStyle },
                 'Property law'
               ),
               React.createElement(
                 'li',
-                null,
+                { style: liStyle },
                 'Wills and probate'
               ),
               React.createElement(
                 'li',
-                null,
+                { style: liStyle },
                 'Tax law & account'
               ),
               React.createElement(
                 'li',
-                null,
+                { style: liStyle },
                 'Commercial & corporate law'
               ),
               React.createElement(
                 'li',
-                null,
+                { style: liStyle },
                 'Litigation & dispute resolution'
               ),
               React.createElement(
                 'li',
-                null,
+                { style: liStyle },
                 'Citizenship law'
               )
             )
@@ -444,12 +447,26 @@ var ServJumbo = React.createClass({
             React.createElement(
               'h2',
               null,
-              'Hello'
+              'English Legal Services'
             ),
             React.createElement(
-              'p',
+              'ul',
               null,
-              'Po'
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Uk immigration law'
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'General  consultancy for people coming in the uk for the first time '
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Legal translation services'
+              )
             )
           ),
           React.createElement(
@@ -458,12 +475,46 @@ var ServJumbo = React.createClass({
             React.createElement(
               'h2',
               null,
-              'Hello'
+              'Turkish Legal Services'
             ),
             React.createElement(
-              'p',
+              'ul',
               null,
-              'Po'
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Divorce & family law'
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Property law'
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Wills and probate'
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Tax law & account'
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Commercial & corporate law'
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Litigation & dispute resolution'
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Pension system'
+              )
             )
           )
         )

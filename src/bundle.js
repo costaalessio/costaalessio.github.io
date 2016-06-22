@@ -183,16 +183,20 @@ var HomePageImage = React.createClass({
       React.createElement(
         _reactBootstrap.Row,
         null,
-        React.createElement('img', { className: 'col col-xs-6', src: '../../images/caro1.jpg', thumbnail: true }),
+        React.createElement('img', { className: 'col col-md-6 col-lg-8 col-xs-12', src: '../../images/caro1.jpg', thumbnail: true }),
         React.createElement(
-          'h1',
-          null,
-          'Title'
-        ),
-        React.createElement(
-          'p',
-          null,
-          'Cu qui homero fabulas indoctum, vim cetero accusam ut. Vis ad integre tractatos elaboraret, nam equidem quaerendum efficiantur ad, augue mazim facete nam ex. Nam ne ignota abhorreant, eos autem iusto omittam cu. Ancillae pericula hendrerit ius ne, no eam vitae euripidis percipitur, meis animal splendide ius eu. Soleat voluptatibus te usu, sit choro tibique invenire ex, sit id doctus minimum constituto.'
+          _reactBootstrap.Col,
+          { xs: 12, md: 6, lg: 4 },
+          React.createElement(
+            'h1',
+            null,
+            'Title'
+          ),
+          React.createElement(
+            'p',
+            null,
+            'Cu qui homero fabulas indoctum, vim cetero accusam ut. Vis ad integre tractatos elaboraret, nam equidem quaerendum efficiantur ad, augue mazim facete nam ex. Nam ne ignota abhorreant, eos autem iusto omittam cu. Ancillae pericula hendrerit ius ne, no eam vitae euripidis percipitur, meis animal splendide ius eu. Soleat voluptatibus te usu, sit choro tibique invenire ex, sit id doctus minimum constituto.'
+          )
         )
       )
     );

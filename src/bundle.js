@@ -135,7 +135,6 @@ var Home = React.createClass({
     return React.createElement(
       'div',
       null,
-      '//',
       React.createElement(_HomePageImage2.default, null),
       React.createElement(_ServJumbo2.default, null),
       React.createElement(
@@ -180,7 +179,7 @@ var HomePageImage = React.createClass({
     };
     return React.createElement(
       _reactBootstrap.Grid,
-      { style: gridStyle },
+      null,
       React.createElement(
         _reactBootstrap.Row,
         null,

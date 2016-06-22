@@ -177,13 +177,16 @@ var HomePageImage = React.createClass({
     var gridStyle = {
       minWidth: '100%'
     };
+    var imgStyle = {
+      paddingTop: '30px'
+    };
     return React.createElement(
       _reactBootstrap.Grid,
       { style: gridStyle },
       React.createElement(
         _reactBootstrap.Row,
         null,
-        React.createElement('img', { className: 'col col-md-6 col-lg-8 col-xs-12', src: '../../images/caro1.jpg', thumbnail: true }),
+        React.createElement('img', { style: imgStyle, className: 'col col-md-6 col-lg-8 col-xs-12', src: '../../images/caro1.jpg', thumbnail: true }),
         React.createElement(
           _reactBootstrap.Col,
           { xs: 12, md: 6, lg: 4 },

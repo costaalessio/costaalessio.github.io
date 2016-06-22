@@ -156,6 +156,10 @@ exports.default = Home;
 },{"./Carousel":3,"./HomePageImage":5,"./ServJumbo":8,"react":494,"react-router":349}],5:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _reactBootstrap = require('react-bootstrap');
 
 var _MyJumbo = require('./MyJumbo');
@@ -202,6 +206,8 @@ var HomePageImage = React.createClass({
     );
   }
 });
+
+exports.default = HomePageImage;
 
 },{"./MyJumbo":6,"react":494,"react-bootstrap":282}],6:[function(require,module,exports){
 'use strict';

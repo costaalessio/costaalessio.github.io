@@ -179,28 +179,24 @@ var HomePageImage = React.createClass({
     };
     return React.createElement(
       _reactBootstrap.Grid,
-      null,
+      { style: gridStyle },
       React.createElement(
         _reactBootstrap.Row,
         null,
         React.createElement(
           _reactBootstrap.Col,
-          { xs: 12, md: 8 },
+          { xs: 12 },
           React.createElement('img', { src: '../../images/caro1.jpg', thumbnail: true })
         ),
         React.createElement(
-          _MyJumbo2.default,
-          { md: 4 },
-          React.createElement(
-            'h1',
-            null,
-            'Title'
-          ),
-          React.createElement(
-            'p',
-            null,
-            'Cu qui homero fabulas indoctum, vim cetero accusam ut. Vis ad integre tractatos elaboraret, nam equidem quaerendum efficiantur ad, augue mazim facete nam ex. Nam ne ignota abhorreant, eos autem iusto omittam cu. Ancillae pericula hendrerit ius ne, no eam vitae euripidis percipitur, meis animal splendide ius eu. Soleat voluptatibus te usu, sit choro tibique invenire ex, sit id doctus minimum constituto. Cibo noster delicata et ius, per eius quodsi cu. Eam te probo nusquam. Vitae integre ad per, an esse congue sadipscing eos, et eam iudico scriptorem. His ad solum detraxit laboramus. Sit no audire patrioque, sumo indoctum eu sed, homero patrioque ius ex. Vim ullum omnes in. Mel erat insolens te, exerci legere efficiendi in pro. Mea ad civibus theophrastus, pro in recusabo elaboraret consequuntur, vim debet errem molestiae ne. Postea deleniti efficiantur per id, ut dolores referrentur nec. Debet ceteros nominati vix ad. Vel adhuc salutatus voluptatibus an. Congue semper te pro, his lorem tamquam dolorem et. Probatus erroribus gubergren no has. At quem labore dictas nec.'
-          )
+          'h1',
+          null,
+          'Title'
+        ),
+        React.createElement(
+          'p',
+          null,
+          'Cu qui homero fabulas indoctum, vim cetero accusam ut. Vis ad integre tractatos elaboraret, nam equidem quaerendum efficiantur ad, augue mazim facete nam ex. Nam ne ignota abhorreant, eos autem iusto omittam cu. Ancillae pericula hendrerit ius ne, no eam vitae euripidis percipitur, meis animal splendide ius eu. Soleat voluptatibus te usu, sit choro tibique invenire ex, sit id doctus minimum constituto.'
         )
       )
     );

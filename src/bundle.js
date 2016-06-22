@@ -379,7 +379,9 @@ var ServJumbo = React.createClass({
 
   render: function render() {
     var style = {
-      backgroundColor: "#140D26",
+      backgroundColor: "#140D26"
+    };
+    var gridStyle = {
       minWidth: '100%'
     };
     var liStyle = {
@@ -390,7 +392,7 @@ var ServJumbo = React.createClass({
       { style: style },
       React.createElement(
         _reactBootstrap.Grid,
-        null,
+        { style: gridStyle },
         React.createElement(
           _reactBootstrap.Row,
           null,

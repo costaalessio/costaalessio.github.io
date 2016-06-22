@@ -379,7 +379,8 @@ var ServJumbo = React.createClass({
 
   render: function render() {
     var style = {
-      backgroundColor: "#140D26"
+      backgroundColor: "#140D26",
+      minWidth: '100%'
     };
     var liStyle = {
       fontSize: '18px'

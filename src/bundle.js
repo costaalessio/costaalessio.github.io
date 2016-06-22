@@ -73,11 +73,12 @@ var MyCarousel = React.createClass({
       backgroundColor: "rgba(241, 241, 241, 0.7)"
     };
     var caroStyle = {
-      maxWidth: '2000px'
+      maxWidth: '2000px',
+      margin: 'auto'
     };
     return React.createElement(
       _reactBootstrap.Carousel,
-      null,
+      { style: caroStyle },
       React.createElement(
         _reactBootstrap.Carousel.Item,
         null,
@@ -450,34 +451,6 @@ var ServJumbo = React.createClass({
             React.createElement(
               'h2',
               null,
-              'English Legal Services'
-            ),
-            React.createElement(
-              'ul',
-              null,
-              React.createElement(
-                'li',
-                { style: liStyle },
-                'Uk immigration law'
-              ),
-              React.createElement(
-                'li',
-                { style: liStyle },
-                'General  consultancy for people coming in the uk for the first time '
-              ),
-              React.createElement(
-                'li',
-                { style: liStyle },
-                'Legal translation services'
-              )
-            )
-          ),
-          React.createElement(
-            ServJumboItem,
-            null,
-            React.createElement(
-              'h2',
-              null,
               'Turkish Legal Services'
             ),
             React.createElement(
@@ -517,6 +490,34 @@ var ServJumbo = React.createClass({
                 'li',
                 { style: liStyle },
                 'Pension system'
+              )
+            )
+          ),
+          React.createElement(
+            ServJumboItem,
+            null,
+            React.createElement(
+              'h2',
+              null,
+              'English Legal Services'
+            ),
+            React.createElement(
+              'ul',
+              null,
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Uk immigration law'
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'General  consultancy for people coming in the uk for the first time '
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Legal translation services'
               )
             )
           )

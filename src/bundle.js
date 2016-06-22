@@ -136,8 +136,6 @@ var Home = React.createClass({
       'div',
       null,
       React.createElement(_HomePageImage2.default, null),
-      '//',
-      React.createElement(_Carousel2.default, null),
       React.createElement(_ServJumbo2.default, null),
       React.createElement(
         'h1',

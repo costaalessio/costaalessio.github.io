@@ -135,6 +135,7 @@ var Home = React.createClass({
     return React.createElement(
       'div',
       null,
+      '//',
       React.createElement(_HomePageImage2.default, null),
       React.createElement(_ServJumbo2.default, null),
       React.createElement(

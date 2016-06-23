@@ -175,6 +175,9 @@ var Title = React.createClass({
       fontSize: '45px',
       fontFamily: "'Playball', cursive"
     };
+    var h2Style = {
+      textAlign: 'center'
+    };
     return React.createElement(
       'div',
       null,
@@ -189,13 +192,13 @@ var Title = React.createClass({
         'International Lawyers'
       ),
       React.createElement(
-        'h1',
-        null,
+        'h2',
+        { style: h2Style },
         'UK immigration Advisers'
       ),
       React.createElement(
         'h2',
-        null,
+        { style: h2Style },
         'info@csinterlawyers.com'
       )
     );
@@ -205,11 +208,29 @@ var Title = React.createClass({
 var HomePageImage = React.createClass({
   displayName: 'HomePageImage',
 
+  onResize: function onResize() {
+    this.setState({
+      isMobile: window.innerWidth < 767
+    });
+  },
+  getInitialState: function getInitialState() {
+    return {
+      isMobile: window.innerWidth < 767
+    };
+  },
+  componentDidMount: function componentDidMount() {
+    window.addEventListener('resize', this.onResize);
+  },
+  componentWillUnmount: function componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+  },
   render: function render() {
     var gridStyle = {
       minWidth: '100%',
       backgroundColor: '#c43235',
-      color: '#e6e6e8'
+      color: '#e6e6e8',
+      display: this.state.isMobile ? 'block' : 'flex',
+      alignItems: 'center'
     };
     var imgStyle = {
       padding: '0px'

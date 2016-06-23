@@ -421,18 +421,18 @@ var Nav = React.createClass({
       null,
       React.createElement(
         NavBrand,
-        { height: this.props.height, fontSize: '15px', isMobile: this.state.isMobile },
+        { height: this.props.height, fontSize: '20px', isMobile: this.state.isMobile },
         'CSInterLawyers'
       ),
       React.createElement(ToggleButton, { isMobile: this.state.isMobile, height: this.props.height, action: this.makeVisible }),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '15px', link: '/about', isMobile: this.state.isMobile, visible: this.state.visible },
+        { height: this.props.height, fontSize: '20px', link: '/about', isMobile: this.state.isMobile, visible: this.state.visible },
         'About'
       ),
       React.createElement(
         NavItem,
-        { height: this.props.height, fontSize: '15px', link: '/contacts', isMobile: this.state.isMobile, visible: this.state.visible },
+        { height: this.props.height, fontSize: '20px', link: '/contacts', isMobile: this.state.isMobile, visible: this.state.visible },
         'Contacts'
       )
     );

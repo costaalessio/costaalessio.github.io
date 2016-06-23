@@ -175,7 +175,8 @@ var HomePageImage = React.createClass({
 
   render: function render() {
     var gridStyle = {
-      minWidth: '100%'
+      minWidth: '100%',
+      backgroundColor: '#c0dfd9'
     };
     var imgStyle = {
       padding: '0px'

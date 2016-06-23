@@ -136,17 +136,7 @@ var Home = React.createClass({
       'div',
       null,
       React.createElement(_HomePageImage2.default, null),
-      React.createElement(_ServJumbo2.default, null),
-      React.createElement(
-        'h1',
-        null,
-        'Homepage :D 6'
-      ),
-      React.createElement(
-        _reactRouter.Link,
-        { to: '/about' },
-        'About'
-      )
+      React.createElement(_ServJumbo2.default, null)
     );
   }
 });
@@ -199,7 +189,7 @@ var HomePageImage = React.createClass({
             'Title'
           ),
           React.createElement(
-            'p',
+            'h3',
             null,
             'Cu qui homero fabulas indoctum, vim cetero accusam ut. Vis ad integre tractatos elaboraret, nam equidem quaerendum efficiantur ad, augue mazim facete nam ex. Nam ne ignota abhorreant, eos autem iusto omittam cu. Ancillae pericula hendrerit ius ne, no eam vitae euripidis percipitur, meis animal splendide ius eu. Soleat voluptatibus te usu, sit choro tibique invenire ex, sit id doctus minimum constituto.'
           )

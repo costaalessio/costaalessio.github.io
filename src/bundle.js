@@ -209,6 +209,7 @@ var HomePageImage = React.createClass({
   displayName: 'HomePageImage',
 
   onResize: function onResize() {
+    console.log('changing');
     this.setState({
       isMobile: window.innerWidth < 767
     });
@@ -244,10 +245,10 @@ var HomePageImage = React.createClass({
       React.createElement(
         _reactBootstrap.Row,
         { style: rowStyle },
-        React.createElement('img', { style: imgStyle, className: 'col col-md-6 col-lg-8 col-xs-12', src: '../../images/caro1.jpg', thumbnail: true }),
+        React.createElement('img', { style: imgStyle, className: 'col col-md-7 col-lg-8 col-xs-12', src: '../../images/caro1.jpg', thumbnail: true }),
         React.createElement(
           _reactBootstrap.Col,
-          { xs: 12, md: 6, lg: 4 },
+          { xs: 12, md: 5, lg: 4 },
           React.createElement(Title, null)
         )
       )

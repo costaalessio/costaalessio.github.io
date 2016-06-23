@@ -278,12 +278,12 @@ var NavItem = React.createClass({
     var style = {
       fontSize: this.props.fontSize,
       display: this.props.isMobile ? this.props.visible ? "block" : "none" : "inline",
-      color: this.state.isHover ? 'white' : "#000",
+      color: this.state.isHover ? '#e9ece5' : "#3b3a36",
       padding: this.props.isMobile ? "0px 30px" : "15px",
       margin: this.props.isMobile ? "0px" : "10px",
       borderRadius: this.props.isMobile ? "0px" : "10px",
       textDecoration: 'none',
-      backgroundColor: this.state.isHover ? '#555' : '#f1f1f1',
+      backgroundColor: this.state.isHover ? '#3b3a36' : '#e9ece5',
       lineHeight: this.props.height
     };
     return React.createElement(
@@ -305,10 +305,10 @@ var NavBrand = React.createClass({
     var style = {
       fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
       display: "inline",
-      color: "#000",
+      color: "#3b3a36",
       margin: 'auto 50px auto 30px',
       textDecoration: 'none',
-      backgroundColor: '#f1f1f1',
+      backgroundColor: '#e9ece5',
       lineHeight: this.props.height
     };
     return React.createElement(
@@ -331,7 +331,7 @@ var NavBar = React.createClass({
       listStyleType: 'none',
       margin: '0px',
       padding: '0px',
-      backgroundColor: '#f1f1f1'
+      backgroundColor: '#e9ece5'
     };
     return React.createElement(
       'div',
@@ -371,8 +371,8 @@ var ToggleButton = React.createClass({
       padding: padString,
       margin: marginString,
       display: this.props.isMobile ? "block" : "none",
-      color: this.state.isHover ? 'white' : "#000",
-      backgroundColor: this.state.isHover ? '#555' : '#f1f1f1'
+      color: this.state.isHover ? '#e9ece5' : "#3b3a36",
+      backgroundColor: this.state.isHover ? '#3b3a36' : '#e9ece5'
     };
     var liStyle = {
       float: "right"

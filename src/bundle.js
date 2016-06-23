@@ -166,11 +166,11 @@ var Title = React.createClass({
 
   render: function render() {
     var csStyle = {
-      fontSize: '30px',
+      fontSize: '50px',
       fontFamily: "'Playball', cursive"
     };
     var ilStyle = {
-      fontSize: '25px',
+      fontSize: '45px',
       fontFamily: "'Playball', cursive"
     };
     return React.createElement(

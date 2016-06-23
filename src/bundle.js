@@ -228,7 +228,9 @@ var HomePageImage = React.createClass({
     var gridStyle = {
       minWidth: '100%',
       backgroundColor: '#c43235',
-      color: '#e6e6e8',
+      color: '#e6e6e8'
+    };
+    var rowStyle = {
       display: this.state.isMobile ? 'block' : 'flex',
       alignItems: 'center'
     };
@@ -241,7 +243,7 @@ var HomePageImage = React.createClass({
       { style: gridStyle },
       React.createElement(
         _reactBootstrap.Row,
-        null,
+        { style: rowStyle },
         React.createElement('img', { style: imgStyle, className: 'col col-md-6 col-lg-8 col-xs-12', src: '../../images/caro1.jpg', thumbnail: true }),
         React.createElement(
           _reactBootstrap.Col,

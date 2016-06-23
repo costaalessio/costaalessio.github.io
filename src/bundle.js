@@ -178,7 +178,8 @@ var HomePageImage = React.createClass({
       minWidth: '100%'
     };
     var imgStyle = {
-      paddingTop: '30px'
+      padding: '0px'
+
     };
     return React.createElement(
       _reactBootstrap.Grid,

@@ -194,7 +194,7 @@ var Title = React.createClass({
       React.createElement(
         'h2',
         { style: h2Style },
-        'UK immigration Advisers'
+        'UK immigration advisers'
       ),
       React.createElement(
         'h2',

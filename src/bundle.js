@@ -176,7 +176,8 @@ var HomePageImage = React.createClass({
   render: function render() {
     var gridStyle = {
       minWidth: '100%',
-      backgroundColor: '#c0dfd9'
+      backgroundColor: '#c43235',
+      color: '#e6e6e8'
     };
     var imgStyle = {
       padding: '0px'
@@ -279,12 +280,12 @@ var NavItem = React.createClass({
     var style = {
       fontSize: this.props.fontSize,
       display: this.props.isMobile ? this.props.visible ? "block" : "none" : "inline",
-      color: this.state.isHover ? '#e6e6e8' : "#06000a",
+      color: this.state.isHover ? '#e6e6e8' : "#300032",
       padding: this.props.isMobile ? "0px 30px" : "15px",
       margin: this.props.isMobile ? "0px" : "10px",
       borderRadius: this.props.isMobile ? "0px" : "10px",
       textDecoration: 'none',
-      backgroundColor: this.state.isHover ? '#06000a' : '#e6e6e8',
+      backgroundColor: this.state.isHover ? '#300032' : '#e6e6e8',
       lineHeight: this.props.height
     };
     return React.createElement(
@@ -306,7 +307,7 @@ var NavBrand = React.createClass({
     var style = {
       fontSize: (parseInt(this.props.fontSize) + 4).toString() + "px",
       display: "inline",
-      color: "#06000a",
+      color: "#300032",
       margin: 'auto 50px auto 30px',
       textDecoration: 'none',
       backgroundColor: '#e6e6e8',
@@ -372,8 +373,8 @@ var ToggleButton = React.createClass({
       padding: padString,
       margin: marginString,
       display: this.props.isMobile ? "block" : "none",
-      color: this.state.isHover ? '#e6e6e8' : "#06000a",
-      backgroundColor: this.state.isHover ? '#06000a' : '#e6e6e8'
+      color: this.state.isHover ? '#e6e6e8' : "#300032",
+      backgroundColor: this.state.isHover ? '#300032' : '#e6e6e8'
     };
     var liStyle = {
       float: "right"

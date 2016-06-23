@@ -160,6 +160,46 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var React = require('react');
 
+
+var Title = React.createClass({
+  displayName: 'Title',
+
+  render: function render() {
+    var csStyle = {
+      fontSize: '30px',
+      fontFamily: "'Playball', cursive"
+    };
+    var ilStyle = {
+      fontSize: '25px',
+      fontFamily: "'Playball', cursive"
+    };
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'h1',
+        { style: csStyle },
+        'C & S'
+      ),
+      React.createElement(
+        'h1',
+        { style: ilStyle },
+        'International Lawyers'
+      ),
+      React.createElement(
+        'h1',
+        null,
+        'UK immigration Advisers'
+      ),
+      React.createElement(
+        'h2',
+        null,
+        'info@csinterlawyers.com'
+      )
+    );
+  }
+});
+
 var HomePageImage = React.createClass({
   displayName: 'HomePageImage',
 

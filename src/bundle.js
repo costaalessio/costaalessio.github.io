@@ -167,12 +167,12 @@ var Title = React.createClass({
   render: function render() {
     var csStyle = {
       textAlign: 'center',
-      fontSize: '50px',
+      fontSize: this.props.width < 1111 ? '40px' : '50px',
       fontFamily: "'Playball', cursive"
     };
     var ilStyle = {
       textAlign: 'center',
-      fontSize: '45px',
+      fontSize: this.props.width < 1111 ? '37px' : '45px',
       fontFamily: "'Playball', cursive"
     };
     var h2Style = {
@@ -194,7 +194,7 @@ var Title = React.createClass({
       React.createElement(
         'h2',
         { style: h2Style },
-        'POOOOUK immigration Advisers'
+        'UK immigration Advisers'
       ),
       React.createElement(
         'h2',
@@ -210,12 +210,12 @@ var HomePageImage = React.createClass({
 
   onResize: function onResize() {
     this.setState({
-      isMobile: window.innerWidth < 992
+      width: window.innerWidth
     });
   },
   getInitialState: function getInitialState() {
     return {
-      isMobile: window.innerWidth < 992
+      width: window.innerWidth
     };
   },
   componentDidMount: function componentDidMount() {
@@ -231,7 +231,7 @@ var HomePageImage = React.createClass({
       color: '#e6e6e8'
     };
     var rowStyle = {
-      display: this.state.isMobile ? 'block' : 'flex',
+      display: this.state.width < 992 ? 'block' : 'flex',
       alignItems: 'center'
     };
     console.log(rowStyle);
@@ -249,7 +249,7 @@ var HomePageImage = React.createClass({
         React.createElement(
           _reactBootstrap.Col,
           { xs: 12, md: 5, lg: 4 },
-          React.createElement(Title, null)
+          React.createElement(Title, { width: this.state.width })
         )
       )
     );

@@ -232,7 +232,8 @@ var MyJumbo = React.createClass({
     };
     var jumboStyle = {
       borderRadius: "0px",
-      backgroundColor: "rgba(241,241,241,0.7)"
+      backgroundColor: "#e6e6e8",
+      color: '#300032'
     };
     return React.createElement(
       _reactBootstrap.Col,
@@ -462,7 +463,7 @@ var ServJumbo = React.createClass({
 
   render: function render() {
     var style = {
-      backgroundColor: "#140D26"
+      backgroundColor: "#06000a"
     };
     var gridStyle = {
       minWidth: '100%'

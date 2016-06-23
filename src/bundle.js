@@ -223,16 +223,7 @@ var HomePageImage = React.createClass({
         React.createElement(
           _reactBootstrap.Col,
           { xs: 12, md: 6, lg: 4 },
-          React.createElement(
-            'h1',
-            null,
-            'Title'
-          ),
-          React.createElement(
-            'h3',
-            null,
-            'Cu qui homero fabulas indoctum, vim cetero accusam ut. Vis ad integre tractatos elaboraret, nam equidem quaerendum efficiantur ad, augue mazim facete nam ex. Nam ne ignota abhorreant, eos autem iusto omittam cu. Ancillae pericula hendrerit ius ne, no eam vitae euripidis percipitur, meis animal splendide ius eu. Soleat voluptatibus te usu, sit choro tibique invenire ex, sit id doctus minimum constituto.'
-          )
+          React.createElement(Title, null)
         )
       )
     );

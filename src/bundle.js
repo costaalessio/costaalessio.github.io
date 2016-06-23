@@ -531,6 +531,34 @@ var ServJumbo = React.createClass({
             React.createElement(
               'h2',
               null,
+              'English Legal Services'
+            ),
+            React.createElement(
+              'ul',
+              null,
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Uk immigration law'
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'General  consultancy for people coming in the uk for the first time '
+              ),
+              React.createElement(
+                'li',
+                { style: liStyle },
+                'Legal translation services'
+              )
+            )
+          ),
+          React.createElement(
+            _MyJumbo2.default,
+            { md: 4 },
+            React.createElement(
+              'h2',
+              null,
               'Italian Legal Services'
             ),
             React.createElement(
@@ -618,34 +646,6 @@ var ServJumbo = React.createClass({
                 'li',
                 { style: liStyle },
                 'Pension system'
-              )
-            )
-          ),
-          React.createElement(
-            _MyJumbo2.default,
-            { md: 4 },
-            React.createElement(
-              'h2',
-              null,
-              'English Legal Services'
-            ),
-            React.createElement(
-              'ul',
-              null,
-              React.createElement(
-                'li',
-                { style: liStyle },
-                'Uk immigration law'
-              ),
-              React.createElement(
-                'li',
-                { style: liStyle },
-                'General  consultancy for people coming in the uk for the first time '
-              ),
-              React.createElement(
-                'li',
-                { style: liStyle },
-                'Legal translation services'
               )
             )
           )

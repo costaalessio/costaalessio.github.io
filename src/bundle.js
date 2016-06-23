@@ -209,7 +209,6 @@ var HomePageImage = React.createClass({
   displayName: 'HomePageImage',
 
   onResize: function onResize() {
-    console.log('changing');
     this.setState({
       isMobile: window.innerWidth < 767
     });
@@ -235,6 +234,7 @@ var HomePageImage = React.createClass({
       display: this.state.isMobile ? 'block' : 'flex',
       alignItems: 'center'
     };
+    console.log(rowStyle);
     var imgStyle = {
       padding: '0px'
 
@@ -415,7 +415,6 @@ var ToggleButton = React.createClass({
     var marginO = 30 - pad;
     var padString = pad.toString() + "px";
     var marginString = marginV.toString() + "px " + marginO.toString() + "px";
-    console.log(marginString);
     var iconStyle = {
       borderRadius: "10px",
       padding: padString,
@@ -462,7 +461,6 @@ var Nav = React.createClass({
     window.removeEventListener('resize', this.onResize);
   },
   render: function render() {
-    console.log(this.state.visible);
     return React.createElement(
       NavBar,
       null,

@@ -210,12 +210,12 @@ var HomePageImage = React.createClass({
 
   onResize: function onResize() {
     this.setState({
-      isMobile: window.innerWidth < 767
+      isMobile: window.innerWidth < 992
     });
   },
   getInitialState: function getInitialState() {
     return {
-      isMobile: window.innerWidth < 767
+      isMobile: window.innerWidth < 992
     };
   },
   componentDidMount: function componentDidMount() {
